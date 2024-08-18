@@ -1,0 +1,53 @@
+instance_id,artist_name,track_name,track_id,popularity,acousticness,danceability,duration_ms,energy,instrumentalness,key,liveness,loudness,mode,speechiness,tempo,time_signature,valence,genre
+116258,Eric Clapton,Love in Vain,4yjz1aazw6R8ZURpGbCAkp,36,0.736,0.656,241907,0.605,0.0235,E,0.217,-7.899,Minor,0.0266,77.621,04-Apr,0.682,Blues
+43988,T. Rex,Raw Ramp,6uslSzMm1xIuCf5p9ECEtz,26,0.363,0.627,254973,0.883,4.29E-05,B,0.0816,-8.416,Minor,0.0611,123.063,04-Apr,0.496,Blues
+204804,Phish,Lawn Boy,1qJBUg6wq9JYe3T9rHMuUw,22,0.596,0.626,151800,0.28,0.0162,E,0.109,-16.641,Major,0.0388,106.016,03-Apr,0.342,Blues
+45436,Chris Robinson Brotherhood,The Music's Hot,6vPS75nWOKkuH5WTLD8hDc,27,0.6,0.586,359987,0.359,0.00152,A,0.688,-11.031,Major,0.0369,87.608,04-Apr,0.6,Blues
+210254,DC Talk,Charlie Freak,1mggAh6xgnKUT6ukw3AU9A,31,0.688,0.633,164853,0.537,0,E,0.287,-12.827,Minor,0.0306,131.639,04-Apr,0.736,Blues
+183667,The Animals,The Girl Can't Help It,2oRtG9p6yINHbo4uxRbP6c,28,0.242,0.628,142653,0.939,0.000402,F,0.119,-5.027,Major,0.0855,101.969,04-Apr,0.882,Blues
+31464,Molly Hatchet,Fall Of The Peacemakers,3HUYAh6tKW5bfmolSRjygE,28,0.0692,0.244,-1,0.725,0.099,G,0.336,-11.619,Major,0.0404,163.498,04-Apr,0.559,Blues
+133877,The Doobie Brothers,Disciple,7oYPCRpV3oPCl2fJ2Gud71,32,0.0726,0.554,404907,0.662,0.705,D,0.126,-15.76,Major,0.0298,134.628,04-Apr,0.754,Blues
+176340,Jefferson Airplane,In The Morning,6jTVRX5f1gXx9w7Vq1dlFW,36,0.0959,0.433,380213,0.447,0.0317,A,0.0507,-12.874,Minor,0.0275,94.518,03-Apr,0.652,Blues
+168779,The Cramps,Surfin' Bird,7JSR685hpFDqvTSNHeSKjL,30,0.0307,0.364,307893,0.962,0.803,E,0.17,-7.738,Major,0.154,105.019,04-Apr,0.629,Blues
+145244,The Almighty Defenders,Bow Down And Die,3rBjagU6UnTMXVjxKN3UfU,32,0.419,0.536,249373,0.891,1.22E-05,C,0.115,-4.629,Major,0.0534,123.48,04-Apr,0.526,Blues
+74556,Gov't Mule,Mr. High and Mighty,7buZF8dfQYYEjLmhPL4dSF,29,0.000761,0.435,333520,0.872,0.0419,C#,0.266,-3.913,Major,0.0372,94.279,04-Apr,0.597,Blues
+59600,A.C. Reed,She's Fine,6NzqidHS9hPiEpbC5LEFl6,27,0.202,0.501,-1,0.44,0.00145,A,0.107,-14.466,Major,0.0372,82.489,04-Apr,0.868,Blues
+136923,The White Stripes,You Don't Know What Love Is (You Just Do As You're Told),2bBSKXRsX0MDrMolVom4jy,39,0.0233,0.427,234400,0.745,6.23E-05,D,0.183,-5.516,Major,0.049,83.96,04-Apr,0.562,Blues
+147711,JJ Grey & Mofro,Brighter Days,2S0XH9R1BVZhbcy7j9yQbx,39,0.108,0.55,480893,0.561,2.12E-06,A#,0.957,-7.84,Major,0.0385,103.466,04-Apr,0.384,Blues
+28335,Grace Potter & The Nocturnals,Falling or Flying,36aAC5ZpEXu6BjLT0rDr7p,25,0.0634,0.345,-1,0.339,0.000198,A,0.312,-9.701,Major,0.0316,138.146,04-Apr,0.109,Blues
+73117,Gary U.S. Bonds,New Orleans,470PZEQc7PUnvhp73hSrJc,22,0.216,0.567,-1,0.851,0,D,0.18,-7.643,Major,0.197,159.225,04-Apr,0.697,Blues
+158699,Whitesnake,Give Me All Your Love - 2018 Remaster,5Cp7mTA2Piq65qWi8h71Q5,33,0.000895,0.196,-1,0.936,0.000109,A,0.0827,-6.401,Minor,0.113,?,01-Apr,0.152,Blues
+180952,Jerry Garcia,Dawg's Waltz,1AXMG1DXnkXlUufkMwcS9A,25,0.829,0.585,272733,0.131,0.798,G,0.105,-17.706,Major,0.0393,87.55,04-Apr,0.35,Blues
+181782,The Last Shadow Puppets,Next To Me,4dz2HlGbb3owfHRi7EWR01,19,0.237,0.653,301627,0.617,0.164,D,0.103,-6.117,Major,0.0402,185.644,04-Apr,0.696,Blues
+28733,Steve Hackett,Please Don't,6KDABpl64wpfl2Tygeim2l,39,1.42E-06,0.319,252693,0.866,0.756,D,0.155,-4.722,Minor,0.0359,109.626,04-Apr,0.554,Blues
+120299,X,The Once over Twice,0CAzT38ct3vgDW3p6yIzUe,28,0.104,0.587,150867,0.744,0.00473,E,0.175,-6.471,Minor,0.0268,?,04-Apr,0.727,Blues
+91922,Phish,Tweezer - Reprise,6ICO15x60YUecFTl6BfaCk,31,0.321,0.27,159733,0.928,0.691,G,0.193,-7.832,Major,0.0451,188.518,04-Apr,0.562,Blues
+52063,ZZ Top,Balinese,2lqc2v750cfFJx6kvkUikn,24,0.118,0.709,158400,0.709,1.11E-05,D,0.125,-12.023,Major,0.037,111.544,04-Apr,0.863,Blues
+136621,Galactic,Karate,2O3DU3oI4jF1NOzr2uhQ8S,22,0.134,0.686,214733,0.826,0.931,F,0.144,-4.472,Major,0.0714,106.047,04-Apr,0.825,Blues
+119361,Peter Frampton,Do You Feel Like We Do - Live,07Vp8mqbrIFtj7YgPMnoCE,47,0.0435,0.318,826813,0.663,0.00391,C,0.937,-8.531,Major,0.0328,104.804,04-Apr,0.365,Blues
+111514,Gary Clark Jr.,Shake (feat. Leon Bridges with Jeff Dazey) - Live,2FCK2nyKq0QXzIuWC88hVj,34,0.021,0.478,249293,0.818,0.0109,F#,0.725,-7.3,Minor,0.0432,106.605,04-Apr,0.564,Blues
+162499,X (5),Los Angeles,392COIitLMUIOwLDEq7Yh7,44,0.0871,0.608,144821,0.791,1.81E-06,G,0.0868,-5.441,Major,0.0306,92.743,04-Apr,0.722,Blues
+162965,Phish,The Mango Song,43jT0iAEN9eEdgtojtzbsw,24,0.123,0.471,383800,0.713,0.0159,G,0.113,-12.881,Major,0.0288,95.764,04-Apr,0.748,Blues
+37515,Latimore,My Give A Damn Gave Out (A Long Time Ago),4nIjmLkIB5EcHvapdrCbuZ,23,0.283,0.489,245720,0.523,1.52E-06,G,0.159,-7.978,Minor,0.122,204.065,04-Apr,0.557,Blues
+47781,Jimmy Page,What Is and What Should Never Be,2j5AMkbTet4BvTWhKrPOta,25,0.0975,0.29,326787,0.904,0.229,A,0.828,-5.157,Major,0.249,?,04-Apr,0.346,Blues
+208547,Neighbourhood Romeo,Fairweather Friends,5pQMeUIDHp7ioCgDK9PyAt,45,0.0115,0.189,223387,0.8,0.000108,B,0.852,-3.818,Minor,0.0931,?,04-Apr,0.322,Blues
+102798,empty_field,Freedom - TROY NōKA Remix,6xUqRrKXyw3GIPnRHzXk0o,37,0.0083,0.561,232907,0.884,0,D,0.351,-5.31,Major,0.151,154.157,04-Apr,0.331,Blues
+94935,King Khan and the Shrines,Luckiest Man,5wvJIQBrndKATE5JbwYzNr,26,0.0439,0.512,-1,0.74,0.0223,A,0.247,-6.917,Minor,0.0335,143.752,04-Apr,0.847,Blues
+48144,Paul Simon,So Beautiful,6OfDNbhNDDBi1t6VIrsMua,0,0.0632,0.559,-1,0.67,0,B,0.124,-4.668,Minor,0.0482,123.741,04-Apr,0.587,Blues
+143522,The Stooges,1969,2lUGO79EPttDp6yVgOiEjS,45,0.000619,0.487,246773,0.635,0.0294,D,0.443,-11.617,Major,0.0522,?,04-Apr,0.729,Blues
+151034,Solomon Burke,Got to Get You off My Mind,5DoTRJlzMaGAMHPTDrfvfW,36,0.621,0.746,-1,0.55,1.27E-06,D,0.0136,-7.554,Major,0.062,102.669,04-Apr,0.736,Blues
+54682,Foghat,I Just Want to Make Love to You,4G8v8POxyDsNyaRAyGvuie,45,0.0922,0.375,261173,0.599,0,G,0.2,-12.022,Major,0.199,126.822,04-Apr,0.62,Blues
+22074,Robin Trower,Farther on up the Road - 2012 Remaster,0JKHjbQR6xJxGS3rKXzXYI,30,0.0377,0.469,155227,0.918,0.000392,C#,0.24,-6.584,Major,0.173,115.201,04-Apr,0.77,Blues
+63078,Tania Maria,Come with me now,15BlympuVSfZFROojEMY2M,37,0.102,0.661,211626,0.729,2.04E-05,A#,0.0578,-5.561,Minor,0.0486,103.971,04-Apr,0.719,Blues
+137093,Rival Sons,Play the Fool,2lgyZWQSJWmswrLJyM27kB,34,0.0118,0.303,197649,0.864,0.359,D,0.426,-5.763,Major,0.0784,138.429,04-Apr,0.292,Blues
+185338,Anthony Butler & The Invaders,The Chokin' Kind,45RrFn6tVyVfVZtupoVEDG,27,0.496,0.69,-1,0.506,0.00304,G#,0.0883,-12.531,Major,0.0556,98.781,04-Apr,0.848,Blues
+183582,Greta Van Fleet,"Lover, Leaver",7vcDJCAO356RYkCfiUozmE,59,0.00214,0.496,214987,0.924,0.22,A,0.136,-3.895,Major,0.0507,91.882,04-Apr,0.594,Blues
+58657,Robert Plant,Let Your Loss Be Your Lesson,7BhGnk11f6IpP70SznOcyJ,28,0.0298,0.489,241680,0.746,0.21,C#,0.0997,-7.073,Major,0.0431,?,04-Apr,0.866,Blues
+142189,Grand Funk Railroad,Bad Time,2uTG00P1DkhB97pdITkl2O,38,0.228,0.56,176280,0.916,0,A,0.0969,-3.72,Minor,0.0393,125.019,04-Apr,0.899,Blues
+55184,Ella Fitzgerald,In A Mellow Tone,7b76ZM3xf6EjaIfsbfhJkZ,49,0.763,0.618,310533,0.125,0,C,0.0976,-16.878,Major,0.0446,106.739,04-Apr,0.507,Blues
+162879,The Wood Brothers,Tried And Tempted,2VCiEwtX8LvC0bQZ6BCKDJ,25,0.9,0.833,213560,0.329,0.211,C,0.109,-11.509,Major,0.0423,98.354,04-Apr,0.555,Blues
+67543,Taj Mahal,Ain't Gwine Whistle Dixie (Anymo') - Live,72iAaOAsrBYa4U0VV7cHFd,37,0.275,0.544,516840,0.571,0.338,A,0.654,-12.837,Major,0.0358,109.244,04-Apr,0.614,Blues
+84830,The Drifters,There Goes My Baby,4C7HmUcT1XwmPpUrK6tLYp,45,0.53,0.338,132613,0.576,0,F#,0.38,-6.161,Minor,0.0372,116.237,01-Apr,0.662,Blues
+116238,Royal Blood,Blood Hands,7zYQKDUJhztcSguS8EOdpT,39,0.612,0.404,189160,0.759,0.00118,D#,0.136,-6.097,Major,0.0433,135.062,03-Apr,0.173,Blues
+20307,JD McPherson,Wolf Teeth,3MS8o3UWQkGdFmhQ8vrFDP,24,0.277,0.778,-1,0.879,0.00283,E,0.0856,-7.085,Minor,0.0766,98.346,04-Apr,0.921,Blues
+88789,Status Quo,Rockin' All Over The World,09QyGlxA0Ja6D1dGIjl55c,44,0.129,0.617,217453,0.962,0.00171,C,0.511,-5.314,Major,0.0449,131.434,04-Apr,0.968,Blues

@@ -2,7 +2,8 @@ import pandas as pd
 import os
 
 # Define the relative path to the CSV file
-csv_path = os.path.join(os.getcwd(), 'blues.csv')
+csv_path = os.path.join(os.getcwd(), '../data/Mega_processed_data.csv')
+output_path = os.path.join(os.getcwd(), '../data/mega_full_processed.csv')
 
 # Check if the file exists
 if not os.path.exists(csv_path):
@@ -20,7 +21,10 @@ else:
     # Apply the correction
     df['time_signature'] = df['time_signature'].apply(correct_time_signature)
 
-    print(df)
+    # Save the modified DataFrame to a new CSV file
+    df.to_csv(output_path, index=False)
+    print(f"Modified CSV saved to: {output_path}")
 
 print(f"Current working directory: {os.getcwd()}")
 print(f"Expected CSV path: {csv_path}")
+print(f"Output CSV path: {output_path}")

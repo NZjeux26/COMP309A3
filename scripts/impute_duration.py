@@ -53,6 +53,6 @@ def process_csv(input_file, output_file, strategy='mean'):
 # Example usage:
 # Adjust the input_file and output_file paths according to your directory structure.
 
-input_file = '../data/merged_data.csv'
+input_file = '../data/Mega_processed_data.csv'
 output_file = '../data/processed_data.csv'
 process_csv(input_file, output_file, strategy='mean')

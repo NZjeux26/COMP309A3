@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the CSV file into a DataFrame
-df = pd.read_csv('../data/merged_data.csv')
+df = pd.read_csv('../data/mega_full_processed.csv')
 
 # Check the column name for genres (assuming it's 'Genre')
 genre_column = 'genre'

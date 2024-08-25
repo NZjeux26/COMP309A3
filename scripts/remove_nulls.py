@@ -14,7 +14,7 @@ def remove_null_values(input_file, output_file):
 
 if __name__ == "__main__":
     # Add your input and output file names here
-    input_file = "../data/outputs/megaoutput.csv"
+    input_file = "../data/outputs/megaoutputtest2.csv"
     output_file = "../data/outputs/megaoutputpn.csv"
     
     remove_null_values(input_file, output_file)

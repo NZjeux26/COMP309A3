@@ -79,6 +79,6 @@ def process_csv(input_file, output_file):
 # Example usage:
 # Adjust the input_file and output_file paths according to your directory structure.
 
-input_file = '../data/training-data/pop.csv'
-output_file = '../data/PopPro.csv'
+input_file = '../data/training-data/blues.csv'
+output_file = '../data/bluesPro.csv'
 process_csv(input_file, output_file)

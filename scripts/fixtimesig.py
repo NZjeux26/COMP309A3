@@ -2,8 +2,8 @@ import pandas as pd
 import os
 
 # Define the relative path to the CSV file
-csv_path = os.path.join(os.getcwd(), '../data/RBPro.csv')
-output_path = os.path.join(os.getcwd(), '../data/RBPro.csv')
+csv_path = os.path.join(os.getcwd(), '../data/comedyPro.csv')
+output_path = os.path.join(os.getcwd(), '../data/comedyPro.csv')
 
 # Check if the file exists
 if not os.path.exists(csv_path):

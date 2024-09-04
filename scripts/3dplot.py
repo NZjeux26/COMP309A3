@@ -172,7 +172,7 @@ var1 = 'acousticness'
 var2 = 'tempo'
 var3 = 'loudness'
 target = 'genre'
-data = '../data/mega_full_processedNorm.csv'
+data = '../data/val_data.csv'
 create_3d_scatter_plot(data, var1, var2,var3, target)
 #create_3d_surface_plot(data,var1,var2,var3)
 #create_3d_contour_plot(data,var1,var2,var3,target)

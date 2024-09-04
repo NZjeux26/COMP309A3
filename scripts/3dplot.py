@@ -169,7 +169,7 @@ def create_3d_wireframe_plot_with_target(csv_path, x_var, y_var, z_var, target_v
 # Example usage (comment out to prevent execution):
 # create_3d_scatter_plot('data.csv', 'var1', 'var2', 'var3', 'target')
 var1 = 'acousticness'
-var2 = 'energy'
+var2 = 'tempo'
 var3 = 'loudness'
 target = 'genre'
 data = '../data/mega_full_processedNorm.csv'

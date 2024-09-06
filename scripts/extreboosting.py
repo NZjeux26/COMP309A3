@@ -23,7 +23,7 @@ for idx, row in predictions_df.iterrows():
         predicted_genre = row['genre']
         
         # If the predicted genre is in the known genres, do nothing
-        if predicted_genre not in known_genres:
+        if predicted_genre not in known_genres: #replace this with if not in known genres, replace with mode
             # Pick the highest probability genre from the known genres
             genre_probabilities = {genre: row[f'NLRNG ({genre})'] for genre in known_genres if f'NLRNG ({genre})' in row}
             

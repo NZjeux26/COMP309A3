@@ -1,14 +1,11 @@
-# ovo_classifier.py
-
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.multiclass import OneVsOneClassifier
-from sklearn.ensemble import HistGradientBoostingClassifier
-from sklearn.metrics import classification_report
+from sklearn.svm import SVC
 
 # Custom transformer to drop columns
 class DropColumns(BaseEstimator, TransformerMixin):
@@ -20,7 +17,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
 
     def transform(self, X):
         return X.drop(columns=self.columns)
-    
+
 def main():
     # Load labeled training data from CSV
     df_train = pd.read_csv('../data/OOfull_processed.csv')
@@ -38,11 +35,13 @@ def main():
 
     # Create transformers for categorical and numerical features
     numerical_transformer = Pipeline(steps=[
+        ('imputer', SimpleImputer(strategy='mean')),
         ('scaler', StandardScaler())  # Standardize numerical features
     ])
 
     categorical_transformer = Pipeline(steps=[
-        ('onehot', OneHotEncoder(handle_unknown='ignore', sparse_output=False))  # One-hot encode categorical features, output dense
+        ('imputer', SimpleImputer(strategy='most_frequent')),
+        ('onehot', OneHotEncoder(handle_unknown='ignore', sparse_output=False))  # One-hot encode categorical features
     ])
 
     # Combine transformers into a preprocessor
@@ -52,45 +51,31 @@ def main():
             ('cat', categorical_transformer, categorical_features)
         ])
 
+    # Create the SVM classifier wrapped in OneVsOneClassifier
+    svm_clf = OneVsOneClassifier(SVC(C=1, kernel='linear', gamma='scale', probability=True))
+
     # Create a pipeline that first preprocesses the data and then fits the model
     pipeline = Pipeline(steps=[
         ('preprocessor', preprocessor),
-        ('classifier', OneVsOneClassifier(
-            HistGradientBoostingClassifier(
-                max_iter=200,  # equivalent to n_estimators
-                learning_rate=0.2,
-                max_depth=5,
-                random_state=42
-            )
-        ))  # Use Histogram-based Gradient Boosting with specified hyperparameters
+        ('classifier', svm_clf)
     ])
 
-    # Split the data into training and test sets
-    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.3, random_state=42, shuffle=True)
-
-    # Train the classifier
+    # Train the SVM model on the entire training set
     pipeline.fit(X_train, y_train)
-
-    # Predict on the validation set
-    y_pred = pipeline.predict(X_val)
-
-    # Evaluate the classifier
-    print("Validation Results:")
-    print(classification_report(y_val, y_pred))
 
     # Load unlabeled test data from CSV
     df_test = pd.read_csv('../data/testing-data/OvOTest_data.csv')
     
     # Drop 'instance_id' before preprocessing
     X_test = df_test.drop(columns=['instance_id'])
-    
+
     # Predict on the unlabeled test set
     test_predictions = pipeline.predict(X_test)
 
     # Save predictions along with instance_id to a CSV file
-    output = pd.DataFrame({'instance_id': df_test['instance_id'], 'Prediction': test_predictions})
-    output.to_csv('../data/outputs/test_predictionsGB.csv', index=False)
-    print("Test predictions saved to 'test_predictionsGB.csv'")
+    output = pd.DataFrame({'instance_id': df_test['instance_id'], 'genre': test_predictions})
+    output.to_csv('../data/outputs/test_predictions_svm.csv', index=False)
+    print("Test predictions saved to 'test_predictions_svm.csv'")
 
 if __name__ == '__main__':
     main()

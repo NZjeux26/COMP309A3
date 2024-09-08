@@ -63,7 +63,7 @@ def main():
     ])
 
     # Split the data into training and test sets
-    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.3, random_state=42)
+    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.3, random_state=42,shuffle=True)
 
     # Train the classifier
     pipeline.fit(X_train, y_train)

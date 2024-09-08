@@ -54,6 +54,6 @@ def process_csv(artists_file, songs_file, output_file):
 
 # Usage
 artists_file = '../data/genremodeFullset.csv'  # CSV containing the list of known artists
-songs_file = '../data/unknownArtists.csv'      # CSV containing the list of songs with unknown artists
+songs_file = '../data/testing-data/unknownArtists.csv'      # CSV containing the list of songs with unknown artists
 output_file = 'output.csv'    # Output CSV to store the results
 process_csv(artists_file, songs_file, output_file)

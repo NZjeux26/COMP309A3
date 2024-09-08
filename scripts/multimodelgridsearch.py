@@ -44,32 +44,32 @@ def main():
 
     # Define models with a pipeline that first preprocesses the data
     models = {
-        'SVM': Pipeline(steps=[('preprocessor', preprocessor),
-                               ('classifier', SVC())]),
+        # 'SVM': Pipeline(steps=[('preprocessor', preprocessor),
+        #                        ('classifier', SVC())]),
         'Logistic Regression': Pipeline(steps=[('preprocessor', preprocessor),
                                                ('classifier', LogisticRegression(max_iter=1000))]),
-        'Gradient Boosting': Pipeline(steps=[('preprocessor', preprocessor),
-                                             ('classifier', GradientBoostingClassifier())]),
+        # 'Gradient Boosting': Pipeline(steps=[('preprocessor', preprocessor),
+        #                                      ('classifier', GradientBoostingClassifier())]),
         'Naive Bayes': Pipeline(steps=[('preprocessor', preprocessor),
                                        ('classifier', GaussianNB())])
     }
 
     # Define parameter grids for each model
     param_grids = {
-        'SVM': {
-            'classifier__C': [0.1, 1, 10],
-            'classifier__kernel': ['linear', 'rbf'],
-            'classifier__gamma': ['scale', 'auto']
-        },
+        # 'SVM': {
+        #     'classifier__C': [0.1, 1, 10],
+        #     'classifier__kernel': ['linear', 'rbf'],
+        #     'classifier__gamma': ['scale', 'auto']
+        # },
         'Logistic Regression': {
             'classifier__C': [0.1, 1, 10],
             'classifier__solver': ['lbfgs', 'liblinear']
         },
-        'Gradient Boosting': {
-            'classifier__n_estimators': [100, 200,],
-            'classifier__learning_rate': [0.1, 0.2,0.3],
-            'classifier__max_depth': [3, 5, 10]
-        },
+        # 'Gradient Boosting': {
+        #     'classifier__n_estimators': [100, 200, 250],
+        #     'classifier__learning_rate': [0.01, 0.1, 0.2, 0.3],
+        #     'classifier__max_depth': [3, 5, 10]
+        # },
         'Naive Bayes': {}
     }
 

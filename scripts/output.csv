@@ -1,0 +1,17 @@
+instance_id,artist_name,track_name,track_id,popularity,acousticness,danceability,duration_ms,energy,instrumentalness,key,liveness,loudness,mode,speechiness,tempo,time_signature,valence,genre
+103681,The Knife,A Knife in the Dark,71rcvcZWR31Msh0l4Gnr8W,51.0,0.9,0.1190,,0.369,0.784,A#,0.14000,-15.537,Major,0.0529,75.039,05/4,0.0431,Classical
+184293,Bedřich Smetana,"Má vlast (My Country): No. 1, Vyšehrad",5XOstrokznSLNZtDomATss,29.0,0.929,0.1760,,0.0325,0.895,D#,0.13200,-22.866,Major,0.0387,103.136,03/4,0.0390,Classical
+217808,empty_field,"Lieder ohne Worte, Op.62 - Arr. Fritz Kreisler: 6. Frühlingslied",2iK2ndZOt0IBdKb7aJFZau,30.0,0.976,0.2090,140160.0,0.0763,0.44,A,0.08410,-24.067,Major,0.0683,173.973,04/4,0.3030,Classical
+160228,Guillaume Dufay,Flos florum,1wKbemG5DPIVxtTQ1pmlOD,27.0,0.993,0.1100,233147.0,0.142,0.000466,G#,0.09620,-19.657,Major,0.0521,77.558,03/4,0.0721,Classical
+198178,Johann Sebastian Bach,"Violin Sonata No. 1 in G Minor, BWV 1001: IV. Presto",5aK019ld6aJZVjAXaoNxfa,25.0,0.995,0.3800,220040.0,0.181,0.777,G,0.17700,-21.900,Minor,0.0498,,03/4,0.7640,Classical
+125550,Franz Schubert,"Schubert: Piano Trio in E-Flat Major, D. 929: II. Andante con moto",7079nY1EuvdfIxaMYaTjR9,41.0,0.966,0.2320,558720.0,0.0529,0.361,C,0.09780,-18.353,Minor,0.0410,87.996,04/4,0.0863,Classical
+123696,empty_field,Desire (Chilling Chambers),4X54KaM10Ajx7n5LdlQIkq,,0.382,0.5750,265500.0,0.712,0.214,D,0.09950,-9.205,Minor,0.0672,173.997,04/4,0.2300,Classical
+54547,empty_field,Una Pàgina per Chopin,4nZ3CyKxICt9TMBzSVMavf,35.0,0.985,0.4000,139280.0,0.0141,0.881,G#,0.14700,-26.638,Major,0.0407,136.232,03/4,0.1470,Classical
+68444,Agustín Barrios Mangoré,Gavota al estilo antiguo,74n1o99L9vL35BGztesx1O,,0.994,0.5180,126667.0,0.0403,0.9,B,0.10000,-30.929,Minor,0.0491,77.556,04/4,0.4600,Classical
+21049,empty_field,Symphony No. 5 in C-Sharp Minor (arr. J. Gribben for piano),7mKJEzvBy4PfuDrUzAlfcv,32.0,0.994,0.4500,599453.0,0.0031,0.934,F,0.07870,-24.947,Major,0.0586,70.530,04/4,0.0582,Classical
+119610,Howard Shore,The Paths Of The Dead,6nTeQGE4xXarl892zLDSuq,36.0,0.619,0.0607,382213.0,0.148,0.942,E,0.10500,-21.983,Minor,0.0384,60.144,03/4,0.0343,Classical
+107474,Frankie Goes To Hollywood,Intermission* - Instrumental,4TyCnstYu6LGrjka5WW6ft,26.0,0.909,0.2630,88693.0,0.114,0.426,G,0.33600,-16.946,Major,0.0392,53.969,05/4,0.1500,Classical
+24840,New York Philharmonic,"Rimsky Korsakov: Scheherazade, Op. 35: II. The Story of the Kalender Prince (Opening)",5fi2bhWaJMj7I3DmoQAF0x,38.0,0.974,0.1760,233067.0,0.0317,0.718,B,0.35300,-24.978,Minor,0.0448,145.834,03/4,0.0387,Classical
+166437,Itzhak Perlman,"Paganini: 24 Caprices, Op. 1: No. 24 in A Minor",3LUv3LsFPaU6fiFdds8O5c,32.0,0.975,0.4670,,0.169,0.243,A,0.05710,-16.437,Minor,0.0491,112.867,04/4,0.4730,Classical
+72697,Pyotr Ilyich Tchaikovsky,"Sleeping Beauty: Valse, Act I, No. 7",45vlODqHQXuL5bIlhCj0Ua,30.0,0.947,0.2350,,0.115,0.891,A#,0.33500,-17.849,Major,0.0343,91.241,01/4,0.3140,Classical
+25164,empty_field,"Franck / Arr. Kenner: Mass in A Major, Op. 12, FWV 61: V. Panis Angelicus",4IGVwhevPXhdGIvmfH9OST,50.0,0.979,0.1900,262367.0,0.0399,0.504,G,0.09120,-26.843,Major,0.0461,83.330,04/4,0.1020,Classical

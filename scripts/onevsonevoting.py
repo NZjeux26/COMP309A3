@@ -1,13 +1,17 @@
-# ovo_classifier.py
+# ovo_voting_classifier_multithreaded.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.multiclass import OneVsOneClassifier
-from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.ensemble import VotingClassifier
 from sklearn.metrics import classification_report
 
 # Custom transformer to drop columns
@@ -20,10 +24,10 @@ class DropColumns(BaseEstimator, TransformerMixin):
 
     def transform(self, X):
         return X.drop(columns=self.columns)
-    
+
 def main():
     # Load labeled training data from CSV
-    df_train = pd.read_csv('../data/OOfull_processed.csv')
+    df_train = pd.read_csv('../data/test_data.csv')
 
     # Separate features and target variable
     X_train = df_train.drop('genre', axis=1)  # Replace 'genre' with your actual target column name
@@ -38,11 +42,13 @@ def main():
 
     # Create transformers for categorical and numerical features
     numerical_transformer = Pipeline(steps=[
+        ('imputer', SimpleImputer(strategy='mean')), 
         ('scaler', StandardScaler())  # Standardize numerical features
     ])
 
     categorical_transformer = Pipeline(steps=[
-        ('onehot', OneHotEncoder(handle_unknown='ignore', sparse_output=False))  # One-hot encode categorical features, output dense
+        ('imputer', SimpleImputer(strategy='most_frequent')),
+        ('onehot', OneHotEncoder(handle_unknown='ignore', sparse_output=False))  # One-hot encode categorical features and output dense array
     ])
 
     # Combine transformers into a preprocessor
@@ -52,29 +58,34 @@ def main():
             ('cat', categorical_transformer, categorical_features)
         ])
 
-    # Create a pipeline that first preprocesses the data and then fits the model
+    # Define individual classifiers
+    clf_nb = OneVsOneClassifier(GaussianNB(), n_jobs=-1)
+    clf_lr = OneVsOneClassifier(LogisticRegression(C=10, solver='liblinear', max_iter=1000), n_jobs=-1)
+    clf_svm = OneVsOneClassifier(SVC(C=1, kernel='linear', gamma='scale', probability=True), n_jobs=-1)
+
+    # Combine classifiers into a voting classifier
+    voting_clf = VotingClassifier(estimators=[
+        ('nb', clf_nb),
+        ('lr', clf_lr),
+        ('svm', clf_svm)
+    ], voting='hard', n_jobs=-1)  # Use 'soft' for probability-based voting, n_jobs=-1 for multithreading
+
+    # Create a pipeline that first preprocesses the data and then fits the ensemble model
     pipeline = Pipeline(steps=[
         ('preprocessor', preprocessor),
-        ('classifier', OneVsOneClassifier(
-            HistGradientBoostingClassifier(
-                max_iter=200,  # equivalent to n_estimators
-                learning_rate=0.2,
-                max_depth=5,
-                random_state=42
-            )
-        ))  # Use Histogram-based Gradient Boosting with specified hyperparameters
+        ('classifier', voting_clf)
     ])
 
     # Split the data into training and test sets
-    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.3, random_state=42, shuffle=True)
+    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.3, random_state=42)
 
-    # Train the classifier
+    # Train the ensemble classifier
     pipeline.fit(X_train, y_train)
 
     # Predict on the validation set
     y_pred = pipeline.predict(X_val)
 
-    # Evaluate the classifier
+    # Evaluate the ensemble classifier
     print("Validation Results:")
     print(classification_report(y_val, y_pred))
 
@@ -89,8 +100,8 @@ def main():
 
     # Save predictions along with instance_id to a CSV file
     output = pd.DataFrame({'instance_id': df_test['instance_id'], 'Prediction': test_predictions})
-    output.to_csv('../data/outputs/test_predictionsGB.csv', index=False)
-    print("Test predictions saved to 'test_predictionsGB.csv'")
+    output.to_csv('../data/outputs/test_predictions_voting_multithreaded.csv', index=False)
+    print("Test predictions saved to 'test_predictions_voting_multithreaded.csv'")
 
 if __name__ == '__main__':
     main()

@@ -13,14 +13,15 @@ from sklearn.metrics import classification_report
 def main():
     # Load data from CSV
     # Replace 'your_data.csv' with your actual CSV file path
-    df = pd.read_csv('../data/OOfull_processed.csv')
+    df = pd.read_csv('../data/train_data.csv')
 
     # Separate features and target variable
-    X = df.drop('genre', axis=1)  # Replace 'target' with your actual target column name
+    X = df.drop(['genre','mode','key','duration_ms'], axis=1)  # Replace 'target' with your actual target column name
+    
     y = df['genre']  # Replace 'target' with your actual target column name
 
     # Define which columns are categorical and which are numerical
-    categorical_features = ['artist_name', 'track_name', 'mode', 'key']  # Replace with your actual categorical columns
+    categorical_features = ['artist_name','track_name']  # Replace with your actual categorical columns
     numerical_features = [col for col in X.columns if col not in categorical_features]
 
     # Create transformers for categorical and numerical features
@@ -44,11 +45,11 @@ def main():
     # Create a pipeline that first preprocesses the data and then fits the model
     pipeline = Pipeline(steps=[
         ('preprocessor', preprocessor),
-        ('classifier', OneVsOneClassifier(SVC(C=1,kernel='linear', gamma='scale',probability=True)))
+        ('classifier', SVC(C=1,kernel='rbf', gamma='scale',probability=True))
     ])
 
     # Split the data into training and test sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42,shuffle=True)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42,shuffle=True)
 
     # Train the classifier
     pipeline.fit(X_train, y_train)

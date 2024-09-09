@@ -61,7 +61,7 @@ def main():
                 learning_rate=0.2,
                 max_depth=5,
                 random_state=42
-            )
+            ),n_jobs=-1
         ))  # Use Histogram-based Gradient Boosting with specified hyperparameters
     ])
 
